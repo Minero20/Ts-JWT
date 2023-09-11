@@ -13,6 +13,7 @@ body -> { <br>
           "username": "...", <br>
           "password": "..." <br>
         } <br>
+(Json format) <br>
 
 get : http://localhost:3000/user <br>
 
