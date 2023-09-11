@@ -9,6 +9,9 @@ export interface usersAttributes {
     bcId?: number;
     detail?: string;
     regisDate?: Date;
+	username?: string;
+	password?: string;
+	sid?: string;
 }
 
 @Table({
@@ -76,4 +79,24 @@ export class users extends Model<usersAttributes, usersAttributes> implements us
     })
     	regisDate?: Date;
 
+    @Column({
+    	field: "username",
+    	allowNull: true,
+    	type: DataType.STRING 
+    })
+		username?: string;
+
+    @Column({
+    	field: "password",
+    	allowNull: true,
+    	type: DataType.STRING 
+    })
+		password?: string;
+		
+	@Column({
+		field: "sid",
+		allowNull: true,
+		type: DataType.STRING 
+	})
+		sid?: string;
 }

@@ -33,8 +33,14 @@ app.use(body_parser_1.default.urlencoded({ extended: true }));
 app.use((0, cors_1.default)({
     origin: ['localhost', '127.0.0.1']
 }));
+const con_user = require('./controllers/user');
+const con_user_type = require('./controllers/user_type');
+const con_road_safety = require('./controllers/road_safety');
 const con_business_category = require('./controllers/business_category');
 const con_causes_accident = require('./controllers/causes_accident');
+app.use('/user', con_user);
+app.use('/user_type', con_user_type);
+app.use('/road_safety', con_road_safety);
 app.use('/business_category', con_business_category);
 app.use('/causes_accident', con_causes_accident);
 app.listen(port, () => {
